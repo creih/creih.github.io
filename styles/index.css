@@ -62,12 +62,17 @@ section img {
     height: auto;
 }
 
-.cover-image {
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
+
+#cover-image a {
+    background-color: #25460a;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#cover-image a:hover {
+    background-color: #73fd01;
 }
 
 .authors a {
