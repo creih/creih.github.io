@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #25460a;
+    background-color: #379b2a;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -21,24 +21,21 @@ header p {
 }
 
 nav ul {
+    
     list-style: none;
     padding: 0;
 }
 
 nav ul li {
+    background-color: #2f5511e7;
+    border-radius: 12px;
+    padding: 10px 20px;
     display: inline;
     margin: 0 10px;
-    background-color: #071f02;
-    border-radius: 5px;
-    padding: 5px 10px;
 }
 
-nav.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #2a5507;
-    z-index: 1000; 
+nav ul li:hover {
+    background-color: #62aa2b;
 }
 
 nav ul li a {
@@ -55,69 +52,65 @@ section {
     background: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 
 section img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
+    order: 2;
 }
 
-
-#cover-image a {
-    background-color: #25460a;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    text-decoration: none;
+.feature-content {
+    flex: 1;
+    max-width: 50%;
 }
 
-#cover-image a:hover {
-    background-color: #73fd01;
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.cover-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0;
+    position: relative;
 }
 
 .authors a {
     display: flex;
-    float: left;
-    left: auto;
-    right: auto;
-    color: #333;
+    align-items: center;
     text-decoration: none;
-}
-
-.authors a:hover {
-    text-decoration: underline;
+    color: #333;
+    margin: 0 10px;
+    position: relative;
 }
 
 .authors img {
-    justify-self: center;
     height: 40px;
     width: 40px;
-    float: left;
-    margin: 0px 10px 10px 4px;
 }
 
-.socials{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px; /* Space between the image and the text */
-}
-
-.socials img {
-    flex: 1; /* Image takes up equal space */
-    max-width: 45%; /* Limit image width */
-    height: auto;
-}
-
-.socials div {
-    flex: 2; /* Text takes up more space */
-    max-width: 55%;
-}
-
+/* Tooltip */
 .authors a:hover::after {
-    content: attr(data-tooltip); /* Display the text stored in data-tooltip attribute */
+    content: attr(data-tooltip);
     position: absolute;
-    bottom: 100%; /* Position the tooltip above the link */
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -135,10 +128,10 @@ section img {
 }
 
 footer {
-    background-color: #25460a;
+    background-color: #379b2a;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
